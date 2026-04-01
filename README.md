@@ -21,7 +21,7 @@ npm -v
 sudo mkdir -p /var/www/pingzero
 sudo chown -R $USER:$USER /var/www/pingzero
 cd /var/www
-git clone https://github.com/nurexbt/pingzero.git pingzero
+git clone https://github.com/nurinfobd/pingzero.git pingzero
 cd pingzero
 ```
 
