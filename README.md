@@ -98,7 +98,9 @@ rm -f hosts.db hosts.db-wal hosts.db-shm
 pm2 restart pingzero || npm start
 # Open http://YOUR_SERVER_IP:3000/install again
 ```
+##  DEVELOPERS INFORMATION
+TeamZero Solutions
+https://teamzero.bd
+info@teamzero.bd
++09647474747
 
-## Notes
-- Do not push `node_modules` or any `*.db*` files to Git. `npm install` recreates dependencies on the server.
-- On HTTP (no TLS), login cookies are handled automatically via proxy detection; HTTPS is recommended for production.
