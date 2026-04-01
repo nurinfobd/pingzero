@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-end-rgb));
+}
+
+/* Global Image Overrides for Logo */
+img[src*="pingzero"],
+img[alt*="PingZero"] {
+  filter: none !important;
+  -webkit-filter: none !important;
+  mix-blend-mode: normal !important;
+  
+  /* Reset ALL Tailwind filter variables */
+  --tw-blur: initial !important;
+  --tw-brightness: initial !important;
+  --tw-contrast: initial !important;
+  --tw-grayscale: initial !important;
+  --tw-hue-rotate: initial !important;
+  --tw-invert: initial !important;
+  --tw-saturate: initial !important;
+  --tw-sepia: initial !important;
+  --tw-drop-shadow: initial !important;
+}
+
+/* Force override any global filter classes */
+.filter, .invert {
+  filter: none !important;
+}
+
+/* ApexCharts Toolbar Overrides */
+.apexcharts-toolbar {
+  z-index: 10 !important;
+}
+.apexcharts-toolbar svg {
+  fill: #64748b !important; /* Slate-500 for good visibility on light/dark mode */
+  transition: fill 0.2s ease;
+}
+.apexcharts-toolbar svg:hover {
+  fill: #3b82f6 !important; /* Blue-500 on hover */
+}
+.apexcharts-theme-dark .apexcharts-toolbar svg {
+  fill: #94a3b8 !important; /* Slate-400 for dark mode */
+}
+.apexcharts-theme-dark .apexcharts-toolbar svg:hover {
+  fill: #60a5fa !important; /* Blue-400 on hover in dark mode */
+}
+.apexcharts-active svg {
+  fill: #3b82f6 !important; /* Active tool color */
+}
+
